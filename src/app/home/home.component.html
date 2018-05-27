@@ -1,0 +1,33 @@
+<div class="ui container">
+  <div class="ui labeled icon menu pointing">
+    <a class="item">
+    <img src="/assets/images/logo.png" style="width:40px; height:40px;">
+  </a>
+    <a class="item" [routerLink]="['list']">
+    <i class="mastercard icon"></i>
+    Transaction list
+  </a>
+    <a class="item" [routerLink]="['payment']">
+    <i class="exchange icon"></i>
+     Pay Now
+  </a>
+    <a class="item" [routerLink]="['addUser']">
+    <i class="add icon"></i>
+    Add Contact
+  </a>
+    <a class="item" [routerLink]="['userList']">
+    <i class="list icon"></i>
+    Contact List
+  </a>
+    <a class="item right" [routerLink]="['profile']">
+    <i class="user icon"></i>
+    {{user_displayName}}
+  </a>
+    <a class="item" (click)="logout()">
+    <i class="sign out icon"></i>
+    Logout
+  </a>
+
+  </div>
+  <router-outlet></router-outlet>
+</div>

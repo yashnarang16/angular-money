@@ -1,0 +1,47 @@
+
+<div class="ui segment">
+    <h2 class="ui right floated header">Floated Content</h2>
+    <div class="ui clearing divider">
+    </div>
+    <form class="ui form" [formGroup]="userForm" novalidate (ngSubmit)='addUser()'>
+      <h4 class="ui dividing header">Basic Information</h4>
+      <div class="field">
+        <div class="two fields">
+          <div class="field">
+            <label>First Name</label>
+            <input type="text" name="shipping[first-name]" placeholder="First Name" formControlName='firstname'>
+          </div>
+          <div class="field">
+            <label>Last Name</label>
+            <input type="text" name="shipping[last-name]" placeholder="Last Name" formControlName='lastname'>
+          </div>
+        </div>
+      </div>
+      <div class="field">
+        <div class="two fields">
+          <div class="field">
+            <label>Contact Number</label>
+            <input type="number" name="shipping[first-name]" placeholder="First Name" formControlName='mobilenumber'>
+          </div>
+          <div class="field">
+            <label>Constrained Date</label>
+            <div class="ui left icon input">
+              <i class="calendar icon"></i>
+              <input suiDatepicker formControlName='dob'>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h4 class="ui dividing header"></h4>
+      <div class="field">
+        <button class="ui secondary button" [disabled]=!userForm.valid type='submit'>
+  Okay
+</button>
+        <button class="ui button">
+  Cancel
+</button>
+
+
+      </div>
+    </form>
+  </div>

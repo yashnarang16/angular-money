@@ -1,0 +1,19 @@
+<div class="ui segment">
+  <div class="ui icon input">
+    <input type="text" placeholder="Search...">
+    <i class="inverted circular search link icon"></i>
+  </div>
+  <h2 class="ui right floated header">Contact list</h2>
+  <div class="ui clearing divider">
+  </div>
+  <div class="ui relaxed divided list">
+     <div class="item" *ngFor="let item of users">
+    <img class="ui avatar image" src="../../assets/images/user.png">
+    <div class="content">
+      <a class="header">{{item.firstname}}&nbsp;{{item.lastname}}</a>
+      <div class="description">{{item.mobilenumber}}</div>
+    </div>
+  </div>
+  </div>
+
+</div>
